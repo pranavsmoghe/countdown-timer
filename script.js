@@ -22,7 +22,7 @@ function startTimer() {
     document.getElementById("countdown").textContent = minutes + ":" + seconds;
 
     if (--timer < 0) {
-      stopTimer();
+      clearInterval(timeInterval);
       alert("Countdown timer has ended!");
     }
   }, 1000);
