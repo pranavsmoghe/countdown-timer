@@ -1,4 +1,5 @@
 var timeInterval;
+var timer;
 
 function startTimer() {
   var minutesInput = document.getElementById("minutes");
@@ -10,18 +11,23 @@ function startTimer() {
   }
 
   var duration = minutes * 60; // Convert minutes to seconds
-  var timer = duration, minutes, seconds;
+  var startTime = Date.now() + duration * 1000; // Calculate the end time
+
+  clearInterval(timeInterval); // Clear any existing interval
 
   timeInterval = setInterval(function() {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+    var currentTime = Date.now();
+    var remainingTime = Math.max(0, Math.floor((startTime - currentTime) / 1000)); // Calculate remaining time in seconds
+
+    var minutes = Math.floor(remainingTime / 60);
+    var seconds = remainingTime % 60;
 
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
     document.getElementById("countdown").textContent = minutes + ":" + seconds;
 
-    if (--timer < 0) {
+    if (remainingTime === 0) {
       clearInterval(timeInterval);
       alert("Countdown timer has ended!");
     }
