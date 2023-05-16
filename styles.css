@@ -1,0 +1,14 @@
+.timer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #countdown {
+    font-size: 36px;
+  }
+  
+  button {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
