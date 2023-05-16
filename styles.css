@@ -2,11 +2,14 @@ body {
     background-color: #222;
     color: #fff;
     font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
   
   .timer {
     text-align: center;
-    margin-top: 100px;
   }
   
   #countdown {
@@ -18,7 +21,7 @@ body {
     font-size: 24px;
     padding: 5px;
     text-align: center;
-    width: 160px; /* Adjusted width to accommodate the placeholder */
+    width: 160px;
     border: none;
     background-color: transparent;
     color: #fff;
