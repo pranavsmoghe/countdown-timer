@@ -1,7 +1,15 @@
 var timeInterval;
 
 function startTimer() {
-  var duration = 60 * 5; // 5 minutes in seconds
+  var minutesInput = document.getElementById("minutes");
+  var minutes = parseInt(minutesInput.value, 10);
+  
+  if (isNaN(minutes)) {
+    alert("Please enter a valid number of minutes.");
+    return;
+  }
+
+  var duration = minutes * 60; // Convert minutes to seconds
   var timer = duration, minutes, seconds;
 
   timeInterval = setInterval(function() {
@@ -23,4 +31,5 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timeInterval);
   document.getElementById("countdown").textContent = "00:00";
+  document.getElementById("minutes").value = "";
 }
