@@ -1,19 +1,52 @@
-.timer {
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timer {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   
   #countdown {
-    font-size: 36px;
+    font-size: 60px;
+    margin-bottom: 20px;
   }
   
   input {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #ffca3a;
   }
   
   button {
-    margin-top: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffca3a;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ffc500;
+  }
+  
+  button:active {
+    background-color: #ffbb00;
   }
   
